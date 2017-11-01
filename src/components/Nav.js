@@ -7,7 +7,7 @@ import { color, font, grid } from '../lib/theme';
 const Nav = () => (
   <nav className={container}>
     <h1>Envy Labs<br />Brand Guide</h1>
-    <NavLink to="/">Mission</NavLink>
+    <NavLink to="/" exact>Mission</NavLink>
     <NavLink to="/culture">Culture</NavLink>
     <NavLink to="/voice-and-tone">Voice and Tone</NavLink>
   </nav>

@@ -94,6 +94,68 @@ const Voice = () => (
         Star Wars comes out tomorrow.
       </article>
     </section>
+    <h4>Didactic</h4>
+    <section className={rule}>
+      <article>
+        In this age of the Internet, people find your info by searching their
+        problem. State the problem being solved in the first sentence. Then
+        explain, in common language, steps to solve it. When an opportunity
+        to teach a technical term arises, explain its meaning in the same
+        sentence structure.
+      </article>
+      <article>
+        Avoid generic, filler phrases like “did you know?”—it belittles the reader while providing no helpful information.
+      </article>
+      <article className={`${good}`}>
+        Are some variables in your JavaScript functions undefined, or
+        returning unexpected values? It could be the closure—the place in
+        your code you’re calling that function from.
+      </article>
+      <article className={`${good} ${bad}`}>
+        ProTip: many JavaScript programmers don’t know how closures work. Do you?
+      </article>
+    </section>
+    <h4>Insightful</h4>
+    <section className={rule}>
+      <article>
+        <p>
+          Consulting falls flat without the occasional counter-cultural
+          opinion. Seek ways to challenge a common negative pattern of
+          thinking/behavior that has long-term impacts: consumerism, learned
+          helplessness, lethargy, etc. Offering solutions isn’t always
+          necessary (or possible!).
+        </p>
+        <p>
+          You cannot give good insight without understanding the culture
+          you‘re speaking to. Respond to real conversations or data-driven
+          patterns happening today. Ideally, insight should spark rich
+          conversation.
+        </p>
+        <p>
+          Insight is a great way to fight back against evil. Rather than take
+          cheap shots at public or political figures, simply call out a
+          problem that needs to be addressed, backing it up with data.
+        </p>
+      </article>
+      <article>
+        Don’t be counter-cultural for the sake of being counter-cultural.
+        Ask what’s at stake if people actually listened. If your words could
+        be used to divide rather than unite people, or denegrate people
+        rather than dignify and elevate them, then spare the world from your
+        thoughts.
+      </article>
+      <article className={`${good}`}>
+        A study of 150 digital agencies revealed most experienced problems with
+        basic business development and growth. Could this be due to
+        overestimation of ability, ignorance of business, or some combination
+        of both?
+      </article>
+      <article className={`${good} ${bad}`}>
+        Digital agencies that experience growth problems should just close
+        their doors forever and quit the industry so the good ones can
+        flourish.
+      </article>
+    </section>
   </Page>
 );
 
@@ -103,11 +165,20 @@ const rule = css({
   display: 'grid',
   fontSize: font.down1,
   gridColumnGap: grid,
-  gridRowGap: 1.5 * grid,
+  gridRowGap: 2 * grid,
   gridTemplateColumns: '1fr 1fr',
   lineHeight: 1.75,
   marginBottom: grid,
   marginLeft: grid,
+
+  '& p': {
+    marginBottom: 0,
+    marginTop: 0,
+
+    '& + p': {
+      marginTop: 0.5 * grid,
+    },
+  },
 });
 
 /* Simple Example */

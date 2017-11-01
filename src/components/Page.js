@@ -38,7 +38,7 @@ const container = css({
     letterSpacing: '0.05em',
     marginBottom: 0.25 * grid,
     marginLeft: grid,
-    marginTop: grid,
+    marginTop: 1.5 * grid,
     textTransform: 'uppercase',
   },
 
@@ -53,8 +53,10 @@ const container = css({
   },
 
   '& ul, & ol': {
+    marginBottom: 0,
     marginLeft: 0,
-    paddingLeft: 0,
+    marginTop: 0,
+    paddingLeft: 0.5 * grid,
   },
 
   '& kbd': {
@@ -68,7 +70,7 @@ const container = css({
     whiteSpace: 'nowrap',
   },
 
-  '& p': {
+  '& > p': {
     fontSize: font.up1,
     lineHeight: 1.75,
     marginBottom: 0,
