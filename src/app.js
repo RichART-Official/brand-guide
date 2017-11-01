@@ -20,9 +20,9 @@ import { color, font } from './lib/theme';
 
 const App = () => (
   <BrowserRouter>
-    <div className={app}>
+    <div className={container}>
       <Nav />
-      <main>
+      <main className={content}>
         <Switch>
           <Route path="/culture" component={Culture} />
           <Route path="/voice-and-tone" component={Voice} />
@@ -40,6 +40,7 @@ const App = () => (
 /* Global Styles */
 
 const global = css.global('html, body', {
+  backgroundColor: color.black,
   color: color.black,
   fontFamily: font.default,
   margin: 0,
@@ -47,9 +48,15 @@ const global = css.global('html, body', {
 
 /* Component Styles */
 
-const app = css({
+const container = css({
   display: 'flex',
   minHeight: '100vh',
+  width: '100%',
+});
+
+const content = css({
+  backgroundColor: color.white,
+  flexGrow: 1,
 });
 
 ReactDOM.render(<App />, document.getElementById('app-root'));
